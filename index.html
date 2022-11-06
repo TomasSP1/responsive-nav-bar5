@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a0359c049b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="navbar" id="navID">
+            <button class="toggle-collapse" id="toggle-button" onclick="myFnc(this)">
+                <span class="toggle-icon"></span>
+            </button>
+
+            <ul class="side-nav">
+                <li class="nav-item">
+                    <a href="#" class="site-name">Daily Tuition</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function myFnc(e) {
+            e.classList.toggle("show");
+
+            const elem = document.getElementById("navID"),
+            Style = window.getComputedStyle(elem),
+            right = Style.getPropertyValue("right");
+
+            if (right == "0px") {
+                elem.style.right = "-260px";
+            }else{
+                elem.style.right = "0px";
+            }
+        }
+    </script>
+</body>
+</html>
